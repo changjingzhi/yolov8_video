@@ -319,13 +319,13 @@ if __name__ == "__main__":
     # 修改后的ArgumentParser部分
     parser = argparse.ArgumentParser(description="Run video inference benchmarks")
     parser.add_argument('--target_model', type=str,
-                        default='yolov8_video-main/model/6490/cutoff_yolov8s_qcs6490_w8a8.qnn231.ctx.bin',
+                        default='model/6490/cutoff_yolov8s_qcs6490_w8a8.qnn231.ctx.bin',
                         help="inference model path")
     
     # 添加三个视频路径参数
-    parser.add_argument('--video_path_1', type=str, default='yolov8_video-main/video/1.mp4', help="Input video path 1")
-    parser.add_argument('--video_path_2', type=str, default='yolov8_video-main/video/2.mp4', help="Input video path 2")
-    parser.add_argument('--video_path_3', type=str, default='yolov8_video-main/video/3.mp4', help="Input video path 3")
+    parser.add_argument('--video_path_1', type=str, default='video/1.mp4', help="Input video path 1")
+    parser.add_argument('--video_path_2', type=str, default='video/2.mp4', help="Input video path 2")
+    parser.add_argument('--video_path_3', type=str, default='video/3.mp4', help="Input video path 3")
     
     parser.add_argument('--model_type', type=str, default='QNN', help="run backend")
     args = parser.parse_args()
